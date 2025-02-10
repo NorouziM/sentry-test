@@ -27,5 +27,4 @@ COPY --from=builder /app/.next ./.next
 
 EXPOSE 3000
 
-# Start the Next.js server
 CMD ["npm", "start"]
