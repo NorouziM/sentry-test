@@ -35,7 +35,7 @@ export default function SentryExamplePage() {
           </svg>
         </h1>
 
-        <p>Get started by sending us a sample error:</p>
+        <p>Get started by sending us a sample error: 2</p>
         <button
           type="button"
           style={{
