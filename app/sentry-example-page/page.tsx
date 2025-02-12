@@ -3,11 +3,11 @@
 import Head from "next/head";
 import * as Sentry from "@sentry/nextjs";
 
-export default function SentryExamplePage() {
+export default function Page() {
   return (
     <div>
       <Head>
-        <title>Sentry Onboarding 22</title>
+        <title>Sentry Onboarding</title>
         <meta name="description" content="Test Sentry for your Next.js app!" />
       </Head>
 
@@ -35,7 +35,7 @@ export default function SentryExamplePage() {
           </svg>
         </h1>
 
-        <p>Get started by sending us a sample error: 2</p>
+        <p>Get started by sending us a sample error:</p>
         <button
           type="button"
           style={{
