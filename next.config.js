@@ -1,17 +1,17 @@
-import { withSentryConfig } from "@sentry/nextjs";
-import type { NextConfig } from "next";
+const { withSentryConfig } = require('@sentry/nextjs')
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   /* config options here */
-};
+}
 
-export default withSentryConfig(nextConfig, {
+module.exports = withSentryConfig(nextConfig, {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
-  org: "idekavan-behtarino",
-  project: "sentry-test",
-  sentryUrl: "https://sentry.hamravesh.com/",
+  org: 'idekavan-behtarino',
+  project: 'sentry-test',
+  sentryUrl: 'https://sentry.hamravesh.com/',
+  debug: true,
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
@@ -24,14 +24,14 @@ export default withSentryConfig(nextConfig, {
 
   // Automatically annotate React components to show their full name in breadcrumbs and session replay
   reactComponentAnnotation: {
-    enabled: true,
+    enabled: true
   },
 
   // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
   // This can increase your server load as well as your hosting bill.
   // Note: Check that the configured route will not match with your Next.js middleware, otherwise reporting of client-
   // side errors will fail.
-  tunnelRoute: "/monitoring",
+  tunnelRoute: '/monitoring',
 
   // Hides source maps from generated client bundles
   hideSourceMaps: false,
@@ -45,5 +45,5 @@ export default withSentryConfig(nextConfig, {
   // https://vercel.com/docs/cron-jobs
   automaticVercelMonitors: true,
 
-  authToken: process.env.SENTRY_AUTH_TOKEN,
-});
+  authToken: process.env.SENTRY_AUTH_TOKEN
+})
