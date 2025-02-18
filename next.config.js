@@ -14,7 +14,7 @@ module.exports = withSentryConfig(nextConfig, {
   debug: true,
 
   // Only print logs for uploading source maps in CI
-  silent: !process.env.CI,
+  silent: false,
 
   // For all available options, see:
   // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
@@ -45,5 +45,5 @@ module.exports = withSentryConfig(nextConfig, {
   // https://vercel.com/docs/cron-jobs
   automaticVercelMonitors: true,
 
-  authToken: process.env.SENTRY_AUTH_TOKEN
+  authToken: 'aefe6f7c96fa4bf58afbd4f030321f1bac68a535c27d4b49aa95ff9e8f3ff7e2'
 })
